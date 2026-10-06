@@ -1,0 +1,6 @@
+from node:24-alpine 
+workdir /musicfeast
+copy package*.json ./
+run npm install
+copy . .
+cmd ["npm","run","dev"]
